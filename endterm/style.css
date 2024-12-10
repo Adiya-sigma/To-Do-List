@@ -1,0 +1,131 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #ffe6f2;
+  color: #333;
+}
+
+h1, .welcome-title {
+  color: #ff66a3;
+}
+
+.btn-pink {
+  background-color: #ff66a3;
+  color: #fff;
+  border: none;
+}
+
+.btn-pink:hover {
+  background-color: #ff4d94;
+}
+
+.todo-container {
+  background-color: #fff0f5;
+  border: 2px solid #ff66a3;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Welcome screen styles */
+#welcomeScreen {
+  background-color: #ffe6f2;
+  color: #ff66a3;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#welcomeScreen.hidden {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+}
+
+/* Task app main content */
+#taskApp {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#taskApp.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Задачи */
+#emptyTaskMessage img {
+  max-width: 150px;
+}
+
+#emptyTaskMessage {
+  color: #888;
+}
+
+.list-group-item {
+  background-color: #ffe6f2;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.list-group-item:hover {
+  background-color: #ffd6e7;
+}
+
+.list-group-item .btn {
+  position: relative;
+  margin-left: 10px;
+  opacity: 0;
+  transition: all 0.3s ease, opacity 0.3s;
+}
+
+.list-group-item:hover .btn {
+  opacity: 0.8;
+}
+.list-group-item:hover .btn {
+  opacity: 0.8;
+}
+
+.list-group-item .btn-danger {
+  margin-left: 0;
+}
+
+.list-group-item .btn-secondary {
+  margin-right: 0;
+}
+/* Завершённые задачи */
+.list-group-item.completed {
+  text-decoration: line-through;
+  color: #82d876;
+  background-color: #f4f4f4;
+}
+
+#completedTaskList .list-group-item:hover {
+  background-color: #eef9b2;
+}
+
+
+footer {
+  background-color: #ff99cc;
+  color: white;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #ff66a3;
+}
+
+.glow {
+  animation: glowEffect 1s infinite alternate;
+}
+
+@keyframes glowEffect {
+  from {
+      box-shadow: 0 0 10px #ff99cc;
+  }
+  to {
+      box-shadow: 0 0 20px #ff66a3;
+  }
+}
